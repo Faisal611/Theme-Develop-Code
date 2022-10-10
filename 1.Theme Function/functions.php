@@ -1,5 +1,4 @@
 <?php
-require_once ('custom-widget/custom-category.php');
 
 if (! function_exists('century_theme_setup')) {
     add_action('after_setup_theme','century_theme_setup');
@@ -27,19 +26,45 @@ if (! function_exists('century_theme_setup')) {
             echo '</ul>';
         }
 
+        /*---The Content --*/
+        function readmore( $count ) {
+            $content   = get_the_content();
+            $explode   = explode( " ", $content );
+            $lessArray = array_slice( $explode, 0, $count );
+            echo implode( ' ', $lessArray );
+        }
+
+        /*---Image Link --*/
+        function all_images() {
+            $image  = get_post_thumbnail_id( get_the_ID() );
+            $images = wp_get_attachment_image_src( $image, 400 );
+            return $images[0];
+        }
+
+        /*----- Add Image size ----*/
+        add_image_size( 'recent_post_image_size', 100, 100, true );
+
+        /*-----Time zone----*/
+		date_default_timezone_set( 'Asia/Dhaka' );
+		function current_default_time() {
+            $data = date( 'd / M' );
+            return $data;
+        }
     }
 }
 
-add_action('widgets_init','right_sidebar_function');
-function right_sidebar_function () {
+/*------- Sidebar register area ------*/
+add_action('widgets_init', 'right_sidebar_widgets');
+function right_sidebar_widgets()
+{
     register_sidebar(array(
-        'name'          => __( 'Right Sidebar', 'centurytheme' ),
-        'id'            => 'right-sidebar',
-        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'centurytheme' ),
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
+        'name' => __('Last Sidebar', 'shipper'),
+        'id' => 'last_sidebar',
+        'description' => __('Last Right Sidebar', 'shipper'),
+        'before_widget' => '<div class="col-md-4">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="title">',
+        'after_title' => '</h4>'
     ));
 }
 
