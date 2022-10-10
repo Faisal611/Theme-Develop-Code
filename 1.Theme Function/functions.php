@@ -1,5 +1,4 @@
 <?php
-require_once ('custom-widget/custom-category.php');
 
 if (! function_exists('century_theme_setup')) {
     add_action('after_setup_theme','century_theme_setup');
