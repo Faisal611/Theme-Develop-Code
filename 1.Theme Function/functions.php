@@ -19,6 +19,14 @@ if (! function_exists('century_theme_setup')) {
             'main-menu' =>__('Main Menu')
         ));
 
+        /*---Default Menu --*/
+        function default_main_menu() {
+
+            echo '<ul class="nav navbar-nav main-menu">';
+            echo '<li><a href="' . home_url() . '" class="transition">HOME</a></li>';
+            echo '</ul>';
+        }
+
     }
 }
 
