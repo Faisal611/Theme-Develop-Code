@@ -19,9 +19,7 @@
         ));
     }
 /*---  Font END ---*/
- /*--
-    <small><?php echo get_post_meta(get_the_ID(),'__designation__',true)?></small> // ar vitore add k
- --*/
+/*-- <small><?php echo get_post_meta(get_the_ID(),'__designation__',true)?></small> // ar vitore add k --*/
 
 /*---!
     1. matebox add_field()function teke je ID pabo sete {<?php echo get_post_meta(get_the_ID(),'__designation__',true)?>} ar vitore add korte hobe !
