@@ -18,7 +18,7 @@
         'fallback_cb'   => 'default_main_menu',
         'walker' =>  new shipper_Nav_walker(),
 
-    )) ?>
+    ))?>
 
     <h3 class="post-title"><?php the_title() ?></h3>
     <?php the_post_thumbnail();?>
