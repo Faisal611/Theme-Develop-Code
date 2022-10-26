@@ -66,8 +66,7 @@ Redux::set_section( $opt_name, array (
 
 ?>
 
-/*-------------------- Fonthand ------------------*/
-// 1. je file ar sate add korbo redux-framework sei file a obosoy Global function use korte hobe
+
 
 <?php
     global $shipper;
