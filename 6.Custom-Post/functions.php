@@ -15,7 +15,7 @@ add_action('after_setup_theme','sheikh_theme_setup');
             'supports' => array(
                 'title', 'editor', 'comments', 'revisions', 'trackbacks', 'author', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats'
             ),
-            
+
         ));
 
         /*----- Tags ------*/
