@@ -10,10 +10,12 @@ add_action('after_setup_theme','sheikh_theme_setup');
                 'add_new_item' => __('Abb New Slider','sheikh_theme')
             ),
             'public' => true,
+            'menu_icon' => 'dashicons-embed-photo',
+            'menu_position' => 5,
             'supports' => array(
                 'title', 'editor', 'comments', 'revisions', 'trackbacks', 'author', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats'
             ),
-            'menu_icon' => 'dashicons-embed-photo'
+            
         ));
 
         /*----- Tags ------*/
