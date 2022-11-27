@@ -1,8 +1,8 @@
 <?php
 add_action('after_setup_theme','sheikh_theme_setup');
     function sheikh_theme_setup () {
+        /*---- Register Post ---- */
 
-    /*---- Register Post ---- */
         register_post_type('banner-slider',array(
             'labels' => array(
                 'name' => 'All Banner Slider',

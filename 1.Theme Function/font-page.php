@@ -25,6 +25,7 @@
     <p class="post-text"> <?php readmore(35) ?></p>
     <h3>Tag : <?php echo get_the_tag_list() ?></h3>
     <h3>Category : <?php echo get_the_category() ?></h3>
+    <span><?php the_data('y m d')?></span>
 
 
 
