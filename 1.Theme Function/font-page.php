@@ -20,12 +20,18 @@
 
     ))?>
 
-    <h3 class="post-title"><?php the_title() ?></h3>
-    <?php the_post_thumbnail();?>
-    <p class="post-text"> <?php readmore(35) ?></p>
-    <h3>Tag : <?php echo get_the_tag_list() ?></h3>
-    <h3>Category : <?php echo get_the_category() ?></h3>
-    <span><?php the_data('y m d')?></span>
+    <span><?php the_title() ?></span>
+    <span><?php the_post_thumbnail();?></span>
+    <span>Content: <?php readmore(35) ?></span>
+    <span>Content: <?php echo wp_trim_words(get_the_content(),50,'.....')?></span>
+    <span>Tag : <?php echo get_the_tag_list() ?></span>
+    <span>Category: <?php echo the_category() ?></span>
+    <span>Category: <?php single_cat_title()?></span>
+    <span>Comments : <?php echo comments_popup_link() ?></span>
+    <span>Date: <?php the_data('y m d')?></span>
+    <span>Author: <?php the_author(); ?></span>
+    <span>Author Img: <?php echo get_avatar( get_the_author_meta('ID'), 60); ?></span>
+
 
 
 
