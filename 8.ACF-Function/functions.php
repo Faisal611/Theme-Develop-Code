@@ -13,7 +13,6 @@ function acf_header_option () {
             'menu_slug'     => 'theme-general-settings',
             'capability'    => 'edit_posts',
             'redirect'      => false,
-            'default' => '',
         ));
     }
 }
